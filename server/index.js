@@ -14,9 +14,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(express.static(path.join(__dirname, '../src')));
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '/../src/index.html'));
-});
 
 app.set('port', process.env.PORT || 3000);
 app.listen(app.get('port'), () => {
