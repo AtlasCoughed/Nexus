@@ -1,21 +1,17 @@
 import { Component } from '@angular/core';
 import { NgForm } from "@angular/forms";
-<<<<<<< HEAD
 import axios from 'axios';
-=======
->>>>>>> ee9004cc361e9020ec574962edd66cb36a271810
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-<<<<<<< HEAD
+
   styles: [`
     .ng-invalid {
       border: 1px solid red;
     }
   `]
-=======
->>>>>>> ee9004cc361e9020ec574962edd66cb36a271810
+
 })
 export class SignupComponent {
   user = {
@@ -26,7 +22,6 @@ export class SignupComponent {
     email: 'chris@test.com',
     password: 'test',
     profilePic: '',
-<<<<<<< HEAD
     bio: 'Born in the mountains, but grew up in the concrete jungle'
   };
 
@@ -47,13 +42,4 @@ export class SignupComponent {
       else { console.log(resp)}
     })
   }
-=======
-    bio: ''
-  }
-
-  onSubmit(form:NgForm){
-    console.log(form.value);
-  }
-
->>>>>>> ee9004cc361e9020ec574962edd66cb36a271810
 }

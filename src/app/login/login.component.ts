@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from "@angular/forms";
-<<<<<<< HEAD
 import axios from 'axios';
-=======
->>>>>>> ee9004cc361e9020ec574962edd66cb36a271810
+
 
 @Component({
   selector: 'login',
@@ -19,7 +17,6 @@ export class LoginComponent {
     username: 'Max',
     email: 'chris@test.com',
     password: 'test',
-<<<<<<< HEAD
   };
 
   onSubmit(form:NgForm){
@@ -30,11 +27,5 @@ export class LoginComponent {
     }).then(resp => {
       if(resp.data.error) console.log("Error in post");
     })
-=======
-  }
-
-  onSubmit(form:NgForm){
-    console.log(form.value);
->>>>>>> ee9004cc361e9020ec574962edd66cb36a271810
   }
 }
