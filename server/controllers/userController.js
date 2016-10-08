@@ -1,6 +1,15 @@
+<<<<<<< 3fbc63c910cf12e2a18f09f5381999404b2d3a87
 const model = require('../config/db.js');
 const password = require('../config/passwordTools.js');
 var uniqueIdentifier;
+=======
+/**
+ * Created by MikeTran on 10/8/16.
+ */
+const model = require('.../models/userModel.js');
+const password = require('./config/passwordTools.js');
+let uniqueIdentifier;
+>>>>>>> [feature] - adds new routing format
 
 module.exports = {
   signup: (req, res) => {
@@ -18,11 +27,16 @@ module.exports = {
     newUser.save() //saves to database
       .then(inputs => {
         res.status(200).send("USER INPUT SAVED");
+<<<<<<< 3fbc63c910cf12e2a18f09f5381999404b2d3a87
       })
       .catch(err => {
         console.log("ERROR", err)
         res.status(500).send("Something inside of userController: ", err);
       })
+=======
+      })
+
+>>>>>>> [feature] - adds new routing format
   },
 
   signin: (req, res) => {

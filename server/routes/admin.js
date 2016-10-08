@@ -3,6 +3,14 @@ const Admin = require('../models/admin');
 const path              = require('path');
 const userController    = require('../controllers/userController');
 const controller = require('../controllers/admin');
+const Admin = require('../models/admin');
+const path              = require('path');
+const userController    = require('../controllers/userController');
+
+
+router.post('/admin/users', (req, res) => {
+  res.status(200).send('POST /api/admin/users');
+});
 
 /* ------------------- TO DO LIST ------------------- */
 router.post('/admin/users/:userId/todos', controller.todos.add);
@@ -16,8 +24,6 @@ router.get('/admin/users/:userId/todos', controller.todos.fetchAll);
 router.post('/admin/user/signup', userController.signup);
 
 router.post('/admin/user/signin', userController.signin );
-
-
 
 /* 404 Redirection */
 router.get('*', (req, res) => res.sendStatus(404) );

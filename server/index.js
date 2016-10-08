@@ -4,7 +4,6 @@ const logger     = require('morgan');
 const bodyParser = require('body-parser');
 const cors       = require('cors');
 const db         = require('./config/db.js');
-
 const app        = express();
 
 // Routes
