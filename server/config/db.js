@@ -5,10 +5,17 @@ const db = new Sequelize(
   'postgres://'+[process.env.db_user]+':'+[process.env.db_pass]+'@aws-us-east-1-portal.23.dblayer.com:15898/compose'
 );
 
+<<<<<<< HEAD
 db
   .sync()
   .then(success => console.log('Successfully connected to Sequelize database'))
   .catch(err => console.log('Error connecting to Sequelize database:', err));
+=======
+connection
+  .authenticate()
+  .then(err => console.log('\033[34mSequelize connected. \033[0m') )
+  .catch(err => console.log('Unable to connect to the database:', err) );
+>>>>>>> ee9004cc361e9020ec574962edd66cb36a271810
 
 /* ------------------- USER ------------------- */
 const User = db.define('user', {
