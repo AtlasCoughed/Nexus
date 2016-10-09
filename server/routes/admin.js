@@ -38,11 +38,11 @@ router.get('/admin/users/:userId/todos', (req, res) => {
 /* ------------------- USER SIGNUP + LOGIN ------------------- */
 
 /* User Endpoints */
-router.post('/admin/user/signup', (req, res) => {
-  userController.signup
-});
+router.post('/admin/user/signup', userController.signup);
 
 router.post('/admin/user/signin', userController.signin );
+
+
 
 /* 404 Redirection */
 router.get('*', (req, res) => res.sendStatus(404) );
