@@ -9,8 +9,8 @@ db
 
 
 /* ------------------- USER ------------------- */
-const User = db.define('user', {
-  email:{
+const User = db.define('User', {
+  email: {
     type: Sequelize.STRING,
     unique: true,
     allowNull: false,
@@ -51,41 +51,39 @@ const User = db.define('user', {
 });
 
 /* ------------------- COHORT ------------------- */
-const Cohort = db.define('cohort', {
-  cohort: {
-    type: Sequelize.INTEGER
-  }
+const Cohort = db.define('Cohort', {
+  cohort: Sequelize.INTEGER
 });
 
 /* ------------------- ANNOUNCEMENT ------------------- */
-const Announcement = db.define('announcement', {
-  announcement: {
-    type: Sequelize.STRING,
-  },
-  cohortId: {
-    type: Sequelize.INTEGER,
-  },
+const Announcement = db.define('Announcement', {
+  announcement: Sequelize.STRING,
+  cohortId: Sequelize.INTEGER
 });
 
 /* ------------------- TO DO LIST ------------------- */
-const Todo = db.define('todo', {
-  todo: {
-    type: Sequelize.STRING,
-    allowNull: false
+const Todo = db.define('Todo',
+  {
+    todo: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
+    userId: Sequelize.INTEGER
   },
-  userId: {
-    type: Sequelize.INTEGER,
+  {
+    tableName: 'Todos',
+    timestamps: true
   }
 });
 
 /* ------------------- ASSOCIATIONS ------------------- */
-User.hasMany(Todo);
+User.hasMany(Todo, { foreignKey: 'adminId' });
 Cohort.hasMany(User);
 Cohort.hasMany(Announcement);
 
 module.exports = {
   User,
-  Todo,
+  Cohort,
   Announcement,
-  Cohort
+  Todo
 };
