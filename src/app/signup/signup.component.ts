@@ -5,13 +5,11 @@ import axios from 'axios';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-
   styles: [`
     .ng-invalid {
       border: 1px solid red;
     }
   `]
-
 })
 export class SignupComponent {
   user = {
