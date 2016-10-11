@@ -32,6 +32,7 @@
     "express": "^4.14.0",
     "font-awesome": "^4.6.3",
     "ionicons": "^2.0.1",
+    "googleapis": "^14.0.0",
     "jsonwebtoken": "^7.1.9",
     "morgan": "^1.7.0",
     "ng2-bootstrap": "^1.1.9",

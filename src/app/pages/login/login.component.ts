@@ -30,6 +30,14 @@ export class LoginComponent {
       data => console.log(data),
       error => console.log(error)
     );
+  }
+  onSignIn(googleUser) {
+    var id_token = googleUser.getAuthResponse().id_token;
 
+    this.userService.googleSignIn(id_token).subscribe(
+      data => console.log(data),
+      error => console.log(error)
+      //
+    );
   }
 }
