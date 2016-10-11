@@ -94,9 +94,15 @@ const signUp = (req, res, newUser) => {
       res.status(400).send(err);
     });
 };
+
+const googleSignIn(req, res) => {
+
+}
+
 exports.auth = {
   signUp: signUp,
   signIn: signIn,
+  googleSignIn: googleSignIn
 }
 
 exports.todos = {

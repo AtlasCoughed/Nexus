@@ -1,9 +1,11 @@
-const router            = require('express').Router();
+'use strict';
 
-const path              = require('path');
-const controller        = require('../controllers/admin');
+var router = require('express').Router();
 
-router.post('/admin/users', (req, res) => {
+var path = require('path');
+var controller = require('../controllers/admin');
+
+router.post('/admin/users', function (req, res) {
   res.status(200).send('POST /api/admin/users');
 });
 
@@ -20,7 +22,10 @@ router.post('/admin/user/signin', controller.auth.signIn);
 router.post('/api/admin/user/oauth2', controller.auth.googleSignIn);
 
 /* 404 Redirection */
-router.get('*', (req, res) => res.sendStatus(404) );
-
+router.get('*', function (req, res) {
+  return res.sendStatus(404);
+});
 
 module.exports = router;
+
+//# sourceMappingURL=admin-compiled.js.map
