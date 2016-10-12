@@ -43,4 +43,14 @@
 <hr>
 <a [routerLink]="['/signup']">Sign Up Here</a>
 <hr>
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<button id="signinButton">Sign in with Google</button>
+<script>
+  $('#signinButton').click(function() {
+    auth2.grantOfflineAccess({'redirect_uri': 'postmessage'}).then(signInCallback);
+  });
+</script>
+
+<br>
+<br>
+
+<a href="#" onclick="signOut();">Sign out</a>

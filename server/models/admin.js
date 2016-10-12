@@ -95,8 +95,8 @@ const signUp = (req, res, newUser) => {
     });
 };
 
-const googleSignIn(req, res) => {
-
+const googleSignIn = (req, res) => {
+console.log("INSIDE OF GOOGLESIGNING")
 }
 
 exports.auth = {

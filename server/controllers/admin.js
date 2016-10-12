@@ -56,7 +56,8 @@ const signUp = (req, res) => {
 };
 
 const googleSignIn = (req, res) => {
- console.log()
+
+
 };
 
 exports.todos = {

@@ -57,9 +57,7 @@ var signUp = function signUp(req, res) {
   model.auth.signUp(req, res, newUser);
 };
 
-var googleSignIn = function googleSignIn(req, res) {
-  console.log();
-};
+var googleSignIn = function googleSignIn(req, res) {};
 
 exports.todos = {
   add: addTodo,

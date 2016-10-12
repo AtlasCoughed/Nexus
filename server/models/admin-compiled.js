@@ -81,6 +81,11 @@ var signUp = function signUp(req, res, newUser) {
     res.status(400).send(err);
   });
 };
+
+var googleSignIn = function googleSignIn(req, res) {
+  console.log("INSIDE OF GOOGLESIGNING");
+};
+
 exports.auth = {
   signUp: signUp,
   signIn: signIn,
