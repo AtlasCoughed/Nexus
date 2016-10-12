@@ -78,6 +78,13 @@ var signUp = function signUp(req, res, newUser) {
   });
 };
 
+<<<<<<< 76c9f1f3a222b471927f4dc44ba24cf1ec3b761e
+=======
+var googleSignIn = function googleSignIn(req, res) {
+  console.log("INSIDE OF GOOGLESIGNING");
+};
+
+>>>>>>> [feature] adds gapi and jquery for front - back end handoff
 exports.auth = {
   signUp: signUp,
   signIn: signIn,

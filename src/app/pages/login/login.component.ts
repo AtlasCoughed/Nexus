@@ -31,13 +31,30 @@ export class LoginComponent {
       error => console.log(error)
     );
   }
-  onSignIn(googleUser) {
-    var id_token = googleUser.getAuthResponse().id_token;
 
-    this.userService.googleSignIn(id_token).subscribe(
-      data => console.log(data),
-      error => console.log(error)
-      //
-    );
+  signInCallback(authResult) {
+    if (authResult['code']) {
+      $('#signinButton').attr('style', 'display: none');
+      // Send the code to the server
+      $.ajax({
+        type: 'POST',
+        url: 'http://localhost:4200/api/admin/googleLogin',
+        contentType: 'application/octet-stream; charset=utf-8',
+        success: function(result) {
+          console.log(result, "SUCCESSFUL POST TO BACKEND")
+        },
+        processData: false,
+        data: authResult['code']
+      });
+    } else {
+      console.log("THERE WAS AN ERROR IN SIGNINCALLBACK");
+    }
   }
+  //
+  // signOut() {
+  //   var auth2 = gapi.auth2.getAuthInstance();
+  //   auth2.signOut().then(function () {
+  //     console.log('User signed out.');
+  //   });
+  // }
 }

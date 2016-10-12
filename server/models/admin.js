@@ -89,6 +89,7 @@ const signUp = (req, res, newUser) => {
 };
 
 
+
 exports.auth = {
   signUp: signUp,
   signIn: signIn,
