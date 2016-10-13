@@ -43,12 +43,14 @@
 <hr>
 <a [routerLink]="['/signup']">Sign Up Here</a>
 <hr>
-<button id="signinButton">Sign in with Google</button>
-<script>
-  $('#signinButton').click(function() {
-    auth2.grantOfflineAccess({'redirect_uri': 'postmessage'}).then(signInCallback);
-  });
-</script>
+<div className="login-card-action">
+  <a className="btn btn-block btn-social btn-facebook"
+     (click)="signInCallback">
+    <span className="fa fa-google"></span>
+    Google Sign In
+  </a>
+</div>
+
 
 <br>
 <br>
