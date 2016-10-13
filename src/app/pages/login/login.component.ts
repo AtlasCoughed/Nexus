@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { UserService } from "../../user.service";
 
+
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
@@ -32,23 +33,10 @@ export class LoginComponent {
     );
   }
 
-  signInCallback(authResult) {
-    if (authResult['code']) {
-      $('#signinButton').attr('style', 'display: none');
-      // Send the code to the server
-      $.ajax({
-        type: 'POST',
-        url: 'http://localhost:4200/api/admin/googleLogin',
-        contentType: 'application/octet-stream; charset=utf-8',
-        success: function(result) {
-          console.log(result, "SUCCESSFUL POST TO BACKEND")
-        },
-        processData: false,
-        data: authResult['code']
-      });
-    } else {
-      console.log("THERE WAS AN ERROR IN SIGNINCALLBACK");
-    }
+  signInCallback() {
+    var location = global.window.location;
+    var port = (location.port) ? ':' + location.port : '';
+    this.userService.googleLogin(location.protocol + '//' + location.hostname + port);
   }
   //
   // signOut() {
