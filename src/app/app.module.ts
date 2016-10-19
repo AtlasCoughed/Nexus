@@ -10,6 +10,8 @@ import { TodoListComponent } from './pages/todo-list/todo-list.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { UserService } from './user.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import {WindowService} from "./services/window.service";
+import {AuthService} from "./services/auth.service";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HttpModule,
     routing
   ],
-  providers: [UserService],
+  providers: [
+    UserService,
+    AuthService,
+    WindowService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

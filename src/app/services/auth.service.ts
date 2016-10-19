@@ -1,6 +1,7 @@
 import {Injectable, EventEmitter} from "@angular/core";
 import {WindowService} from "./window.service";
 import {Http, Headers} from "@angular/http";
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AuthService {
