@@ -3,7 +3,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms"
 
 @Component({
   selector: 'app-user-profile',
-  templateUrl: './user-profile.component.html'
+  templateUrl: 'user-profile.component.html'
 })
 export class UserProfileComponent {
   myForm: FormGroup;
