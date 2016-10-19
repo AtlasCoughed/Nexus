@@ -1,3 +1,5 @@
+//Credit goes to https://github.com/michaeloryl/ for providing clear RC final directions
+
 import {Injectable, EventEmitter} from "@angular/core";
 import {WindowService} from "./window.service";
 import {Http, Headers} from "@angular/http";
@@ -140,6 +142,7 @@ export class AuthService {
   }
 
   public getUserName() {
+    console.log("userInfo: ", this.userInfo);
     return this.userInfo ? this.userInfo[this.oAuthUserNameField] : null;
   }
 

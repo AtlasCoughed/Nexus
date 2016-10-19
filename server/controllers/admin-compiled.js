@@ -55,18 +55,6 @@ var signUp = function signUp(req, res) {
   model.auth.signUp(req, res, newUser);
 };
 
-<<<<<<< 76c9f1f3a222b471927f4dc44ba24cf1ec3b761e
-=======
-var googleSignIn = function googleSignIn(req, res) {};
-
-exports.todos = {
-  add: addTodo,
-  update: updateTodoById,
-  delete: deleteTodoById,
-  fetchAll: fetchAllTodos
-};
-
->>>>>>> [feature] adds gapi and jquery for front - back end handoff
 exports.auth = {
   signIn: signIn,
   signUp: signUp,

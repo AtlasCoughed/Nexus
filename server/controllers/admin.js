@@ -54,6 +54,7 @@ const signUp = (req, res) => {
 };
 
 
+
 exports.auth = {
   signIn: signIn,
   signUp: signUp,

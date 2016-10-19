@@ -10,7 +10,7 @@ router.delete('/admin/user/todos/:todoId', controller.todos.delete);
 /* ------------------- USER SIGNUP + LOGIN ------------------- */
 router.post('/admin/user/signup', controller.auth.signUp);
 router.post('/admin/user/signin', controller.auth.signIn);
-router.post('/api/admin/user/oauth2', controller.auth.googleSignIn);
+router.post('/auth/callback', controller.auth.googleSignIn);
 
 /* 404 Redirection */
 router.get('*', (req, res) => res.sendStatus(404));
