@@ -8,7 +8,6 @@ const APP_ROUTES: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: '', component: TodoListComponent},
-
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);

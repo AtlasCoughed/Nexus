@@ -11,6 +11,7 @@ import { UserService } from "./../user.service";
     }
   `]
 })
+
 export class LoginComponent {
   user = {
     username: 'Max',
@@ -31,6 +32,4 @@ export class LoginComponent {
       error => console.log(error)
     );
   }
-
-
 }

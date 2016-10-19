@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var model = require('../models/admin');
 
@@ -57,7 +57,9 @@ var signUp = function signUp(req, res) {
   model.auth.signUp(req, res, newUser);
 };
 
-var googleSignIn = function googleSignIn(req, res) {};
+var googleSignIn = function googleSignIn(req, res) {
+  console.log("Inside of Controllers: ", req);
+};
 
 exports.todos = {
   add: addTodo,
