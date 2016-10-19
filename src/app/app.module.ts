@@ -9,13 +9,15 @@ import { LoginComponent } from './pages/login/login.component';
 import { TodoListComponent } from './pages/todo-list/todo-list.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { UserService } from './user.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     TodoListComponent,
-    SignupComponent
+    SignupComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

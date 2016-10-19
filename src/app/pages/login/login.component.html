@@ -43,12 +43,12 @@
 <hr>
 <a [routerLink]="['/signup']">Sign Up Here</a>
 <hr>
-<div className="login-card-action">
-  <a className="btn btn-block btn-social btn-facebook"
-     (click)="signInCallback">
-    <span className="fa fa-google"></span>
-    Google Sign In
-  </a>
+<div class="login-wrapper">
+  <p>You need to log in.</p>
+  <div id="{{googleLoginButtonId}}"></div>
+</div>
+<div class="main-application">
+  <p>Hello, {{userDisplayName}}!</p>
 </div>
 
 
