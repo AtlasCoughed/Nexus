@@ -33,4 +33,11 @@ export class LoginComponent {
       error => console.log(error)
     );
   }
+
+  googleLogin(data){
+    this.userService.googleSignIn(data).subscribe(
+      data => console.log(data),
+      error => console.log(error)
+    );
+  }
 }

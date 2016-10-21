@@ -24,7 +24,13 @@ export class UserService {
   }
 
 
-
+  googleSignIn(data){
+    const body = JSON.stringify(data);
+    const headers = new Headers ({
+      'Content-Type': 'application/json'
+    });
+    return this.http.post('/api/admin/googleSignIn', body, {headers: headers})
+  }
 
 
 
