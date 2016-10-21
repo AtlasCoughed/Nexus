@@ -19,7 +19,7 @@ router.get('/admin/users/:userId/todos', controller.todos.fetchAll);
 
 router.post('/admin/user/signup', controller.auth.signUp);
 router.post('/admin/user/signin', controller.auth.signIn);
-router.post('/auth/callback', controller.auth.googleSignIn);
+router.post('/admin/user/googleSignIn', controller.auth.googleSignIn);
 
 /* 404 Redirection */
 router.get('*', function (req, res) {

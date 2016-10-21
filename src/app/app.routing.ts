@@ -8,6 +8,7 @@ const APP_ROUTES: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: '', component: TodoListComponent},
+  { path: 'auth/callback', pathMatch: 'full', component: LoginComponent},
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);

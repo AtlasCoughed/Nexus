@@ -57,7 +57,6 @@ const signUp = (req, res) => {
 
 const googleSignIn = (req, res) => {
   console.log("Inside of Controllers: ", req)
-
 };
 
 exports.todos = {
